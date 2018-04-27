@@ -76,9 +76,7 @@ namespace ExampleBot.Modules
                     await Context.Channel.SendMessageAsync(output);
                 }
                 else
-                {
                     await Context.Channel.SendMessageAsync("You can only search one album at a time, or there are no albums in our inventory that match your search.");
-                }
             }
         }
 
@@ -100,13 +98,9 @@ namespace ExampleBot.Modules
                     await Context.Channel.SendMessageAsync(output + "\n\n*Quantity may be inaccurate. Please call us at (920) 123-4567 to confirm we still have the album you're looking for.");
                 }
                 else if (filtered.Count == 1 && filtered[0].Quantity == 0)
-                {
                     await Context.Channel.SendMessageAsync(description + " is currently out of stock, please call us at (920) 123-4567 for an estimate of when it will be back in stock");
-                }
                 else
-                {
                     await Context.Channel.SendMessageAsync("You can only search one album at a time, or there are no albums in our inventory that match your search.");
-                }
             }
         }
     }

@@ -35,9 +35,7 @@ namespace ExampleBot
                 var result = await _service.ExecuteAsync(context, argPos);
 
                 if (!result.IsSuccess && result.Error != CommandError.UnknownCommand)
-                {
                     await context.Channel.SendMessageAsync("Invalid command, type !commands for a list of commands.");
-                }
             }
         }
     }
