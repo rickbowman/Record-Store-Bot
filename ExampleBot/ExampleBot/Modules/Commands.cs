@@ -47,12 +47,6 @@ namespace ExampleBot.Modules
                                                    "\nSunday: Closed");
         }
 
-        [Command("test")]
-        public async Task test()
-        {
-            await Context.Channel.SendMessageAsync("@everyone test");
-        }
-
         [Command("search")]
         public async Task Search([Remainder]string description)
         {
