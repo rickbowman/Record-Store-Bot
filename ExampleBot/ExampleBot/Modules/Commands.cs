@@ -14,7 +14,7 @@ namespace ExampleBot.Modules
     {
         AlbumList albums = GetAlbums();
 
-        public static AlbumList GetAlbums()
+        private static AlbumList GetAlbums()
         {
             using (HttpClient client = new HttpClient())
             {
